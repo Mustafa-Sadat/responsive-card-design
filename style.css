@@ -1,0 +1,260 @@
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+html{
+    font-family:Arial, Helvetica, sans-serif
+    
+}   
+body{
+    font-size: 13px;
+    background-color: #f4f4f4;
+    line-height: 1.3;
+    font-weight:300;
+    
+    
+}
+
+.container{
+    max-width:800px;
+    margin:0 auto;
+    width:92%;
+}
+
+
+.public{
+    padding:40px 0;
+    --auto-grid-min-size:200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 30px;
+}
+
+
+/* Card style  */
+.card{
+    max-width:270px;
+    background: white;
+    border-radius:4px;
+    
+    -webkit-box-shadow:  0 1px 2px #ccc;  
+    -moz-box-shadow:     0 1px 2px  #ccc;
+    box-shadow:          0 1px 2px  #ccc;
+    position: relative;
+}
+
+/* Card Body  */
+.card__body{
+    padding-left:20px;
+    padding-right:20px;
+}
+
+/* top Img  */
+.card__src{
+    width:100%;
+    height:230px;
+    object-fit: cover;
+}
+
+
+/* img Person  */
+
+.card__person{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+    object-fit: contain;
+    
+}
+
+
+.card__person--img{
+    height:55px;
+    width:55px;
+    border-radius: 50%;
+    border:4px solid white;
+    margin-top:-35px;
+    margin-right:-3px;
+}
+
+
+.card__content--h4{
+    font-size:14px;
+}
+
+.card__content--p{
+    padding:20px 0 30px ;
+    color: rgb(114, 110, 110);
+    
+}
+
+
+
+
+/* Card footer  */
+.card__footer{
+    border-top: 1px solid #ccc;
+    padding:10px 20px;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__badge{
+    border-radius:3px;
+    padding:2px;
+    color:white;
+    align-self: center;
+    text-transform: uppercase;
+    font-size:9px;
+}
+.badge-primary {
+    color: #fff;
+    background-color: #007bff;
+}
+
+.badge-warning {
+    color: #212529 !important;
+    background-color: #ffc107;
+}
+
+
+
+.card__footer--p{
+    font-size:9px;
+    color: rgb(114, 110, 110);
+}
+
+
+.card__title{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:  #0fc2839c;
+    padding:6px;
+    color:white;
+    font-size:11px;
+    
+}
+
+.footer__content{
+    --auto-grid-min-size:200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 30px;
+    background-image: linear-gradient(to bottom right, #2bdc9f, #1ecac9);
+    padding:40px 20px;
+}
+
+.footer .footer__content ul{
+    display: flex;
+    flex-direction: column;
+
+    /* background-color: rebeccapurple; */
+}
+
+
+
+
+.footer .footer__content ul h3{
+    margin-bottom: 20px;
+    color:white;
+}
+
+.footer .footer__content ul li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+
+.footer .footer__content ul li a{
+    text-decoration: none;
+    color:white;
+}
+
+
+
+
+
+
+/* =====Responsive Code ========  */
+
+
+
+
+@media screen and (max-width:768px){
+    body{
+        font-size: 12px;
+    }
+    
+    .business_lists{
+        margin:40px 0;
+        
+    }
+    .container{
+        width:96%;
+    }
+    .public{
+        padding:20px 0; 
+        grid-gap: 20px;
+    }
+    
+    .card__content--h4{
+        font-size:13px;
+    }
+    .card__footer--p{
+        font-size:9px;
+        color: rgb(114, 110, 110);
+    }
+    
+    .card__badge{
+        align-self: center;
+    }
+    
+    /* Card Body  */
+    .card__body{
+        padding-left:15px;
+        padding-right:15px;
+    }
+    .card__person--img{
+        height:50px;
+        width:50px;
+        margin-top:-30px;
+    }
+    .card__content--p{
+        padding:15px 0 25px ;
+    }
+    /* Card footer  */
+    .card__footer{
+        padding:10px 15px;
+        margin:0 auto;    
+    }
+    
+      
+    
+}
+
+
+@media screen and (max-width:513px){
+    .card{
+        margin: auto;
+    }
+    
+}
+
+
+
+@media screen and (max-width:447px){
+    .footer{
+       text-align: center;
+    }
+
+    .footer__content ul{
+        grid-gap: 0px !important;
+        /* background-color: red !important;; */
+    }
+    
+}
+
+
